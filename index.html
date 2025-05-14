@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="./style.css" />
+
+  <title>Metodología BEM + Variables CSS + Modo Nocturno + Fixeo de Footer</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <h1 class="header__title">Aplicación CSS</h1>
+    <nav class="header__nav">
+      <a href="#" class="header__link header__link--active">Inicio</a>
+      <a href="#" class="header__link">Proyectos</a>
+      <a href="#" class="header__link">Contacto</a>
+    </nav>
+
+    <!-- Botón para cambiar el tema -->
+    <button id="theme-toggle" class="header__button">Cambiar Tema</button>
+
+  </header>
+
+  <main class="main-content">
+
+    <section class="card">
+      <h2 class="card__title">Practicando CSS</h2>
+
+      <p class="card__description">
+        Este proyecto utiliza tecnologías modernas y buenas prácticas de desarrollo como 
+        Medología BEM para el manejo de clases, variables CSS, diseño responsivo, 
+        y cambio de estilo dinamico (claro / oscuro) con JavaScript.
+      </p>
+
+      <a href="#" class="card__button card__button--primary">Ver más</a>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__text">© 2025 Dante Delprato. Espero le sea de utilidad a todos.</p>
+  </footer>
+
+  <script src="./script.js"></script> <!-- Agregamos el JS para el cambio de tema -->
+</body>
+
+</html>

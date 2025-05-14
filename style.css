@@ -1,0 +1,160 @@
+/* ========================= */
+/*       VARIABLES CSS       */
+/* ========================= */
+:root {
+  /* Temas claros */
+  --color-fondo: #fff;
+  --color-texto: #111;
+  --color-principal: #7B5E57;
+  --color-secundario: #EFE8DE;
+  --color-boton: #7B5E57;
+  --color-boton-hover: #5A3D36;
+}
+
+[data-theme="dark"] {
+  /* Temas oscuros */
+  --color-fondo: #2E2B29;
+  --color-texto: #F1F1F1;
+  --color-principal: #A67B5B;
+  --color-secundario: #4E4B45;
+  --color-boton: #A67B5B;
+  --color-boton-hover: #5A3D36;
+}
+
+/* ========================= */
+/* Estilos Base para el Body */
+/* ========================= */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ========================= */
+/*       HEADER (BEM)        */
+/* ========================= */
+.header {
+  background-color: var(--color-principal);
+  color: var(--color-fondo);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__title {
+  font-size: 2rem;
+}
+
+.header__nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.header__link {
+  color: var(--color-fondo);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.header__link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.header__button {
+  background-color: var(--color-boton);
+  color: var(--color-fondo);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-secundario);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.header__button:hover {
+  background-color: var(--color-boton-hover);
+}
+
+/* ========================= */
+/*       MAIN CONTENT        */
+/* ========================= */
+.main-content {
+  padding: 2rem;
+  flex: 1;
+}
+
+.card {
+  background-color: var(--color-secundario);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card__title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card__description {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card__button {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-principal);
+  color: var(--color-fondo);
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.card__button:hover {
+  background-color: var(--color-boton-hover);
+}
+
+/* ========================= */
+/*          FOOTER           */
+/* ========================= */
+.footer {
+  background-color: var(--color-principal);
+  color: var(--color-fondo);
+  text-align: center;
+  padding: 1rem;
+}
+
+.footer__text {
+  font-size: 0.875rem;
+}
+
+/* ========================= */
+/*       MEDIA QUERIES       */
+/* ========================= */
+
+@media (max-width: 600px) {
+  html {
+    font-size: 90%;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header__nav {
+    margin-top: var(--spacing-sm);
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+}
