@@ -241,9 +241,9 @@ color: var(--no-definida, black); /* usa 'black' como respaldo */
 
 ## 📐 **Nivel 4: Responsive con `clamp()` y variables**
 
-### 🔧 ¿Qué es `clamp()`?
+### 🔧 ¿Como agregamos `clamp()`?
 
-Una función que permite definir valores **fluídos** pero con límites:
+Siendo una función que permite definir valores **fluídos** pero con límites:
 
 ```css
 font-size: clamp(1rem, 2.5vw, 2rem);
